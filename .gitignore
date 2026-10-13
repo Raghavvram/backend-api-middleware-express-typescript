@@ -4,6 +4,9 @@
 pnpm-lock.yaml
 .pnpm-lock.yaml
 
+pnpm-workspace.yaml
+.pnpm-workspace.yaml
+
 ### Node ###
 # Logs
 logs

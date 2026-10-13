@@ -1,4 +1,6 @@
 const express = require('express');
+const userRoute = require('./routes/route-root.js')
+const userPost = require('./routes/route-post.js')
 
 const PORT = 3000;
 const url = `http://localhost:${PORT}`;
@@ -6,15 +8,9 @@ const url = `http://localhost:${PORT}`;
 const app = express();
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send({ message: "Backend is Running" });
-});
+app.use("/api", userRoute);
 
-app.post("/", (req, res) => {
-  const data = req.body;
-  res.send(data);
-  console.log(data);
-})
+app.use("/api/post", userPost);
 
 app.listen(PORT, () => {
   import('terminal-link').then(({ default: terminalLink }) => {
