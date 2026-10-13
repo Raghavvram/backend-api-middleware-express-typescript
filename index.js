@@ -8,6 +8,8 @@ const url = `http://localhost:${PORT}`;
 const app = express();
 app.use(express.json());
 
+app.use(express.static('public'));
+
 app.use("/api", userRoute);
 
 app.use("/api/post", userPost);
