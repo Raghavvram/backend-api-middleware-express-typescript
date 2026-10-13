@@ -1,6 +1,6 @@
 const fun_post = (req, res) => {
   const data = req.body;
-  res.json(data);
+  res.status(201).json(data);
   console.log(data);
 };
 
